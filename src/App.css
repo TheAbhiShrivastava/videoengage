@@ -16,4 +16,20 @@
 .video-container {
   width: 50%;
   margin: auto;
+  margin-top: 50px;;
+}
+
+.brand-logo{
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  padding: 50px;
+}
+
+.current-selections{
+  margin-top: 2em;
+}
+.current-selections ul {
+  list-style: none;
+  margin: auto;
 }
