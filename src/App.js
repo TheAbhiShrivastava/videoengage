@@ -9,7 +9,7 @@ function App() {
       <div className="video-container">
         <div className="voomly-embed player-styles" 
           data-id="JGQueDo_w" 
-          data-ratio="1.000000" 
+          data-ratio="0.600000" 
           data-type="f" 
           data-skin-color="#008EFF" 
           data-shadow="">
