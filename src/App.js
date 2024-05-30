@@ -49,7 +49,7 @@ function App() {
         </ul>
       </div>}
       <ContactModal open={openContactModal} interactions={answers}></ContactModal>
-      <Button type="button" onClick={()=> setOpenContactModal(true)}>Contact</Button>
+      <Button type="button" style={{marginTop: 20}} onClick={()=> setOpenContactModal(true)}>Contact</Button>
       <div className='footer-container'>
         <AppFooter></AppFooter>
       </div>
