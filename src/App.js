@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
-import {useSearchParams} from 'react-dom';
 import './App.css';
-import './index.css'
-import Header from './Components/Header';
-import Footer from './Components/footer';
+import VIAppBar from './components/app-bar/VIAppBar';
+import AppFooter from './components/app-footer/AppFooter';
+import Button from '@mui/joy/Button';
+import ContactModal from './components/contact-modal/ContactModal';
 function App() {
   const [answers, setAnswers] = React.useState([]);
+  const [openContactModal, setOpenContactModal] = React.useState(false);
   let videoId = '';
   const search = window.location.search;
   const params = new URLSearchParams(search);
@@ -28,7 +29,10 @@ function App() {
   }
   return (
     <div className="App">
-      <Header/>   
+      <header>
+        
+        <VIAppBar></VIAppBar>
+      </header>
       <div className="video-container">
         <div className="voomly-embed player-styles" 
           data-id={videoId} 
@@ -44,7 +48,11 @@ function App() {
           {answers.map(ans => <li>{ans}</li>)}
         </ul>
       </div>}
-      <Footer/>
+      <ContactModal open={openContactModal} interactions={answers}></ContactModal>
+      <Button type="button" style={{marginTop: 20}} onClick={()=> setOpenContactModal(true)}>Contact</Button>
+      <div className='footer-container'>
+        <AppFooter></AppFooter>
+      </div>
     </div>
   );
 }
